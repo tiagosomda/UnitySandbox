@@ -16,7 +16,7 @@ public class NexusBase : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Equals("enemy"))
+        if (other.tag.Equals("Enemy"))
         {
             life--;
             Destroy(other.gameObject);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PointClick : MonoBehaviour {
     public Transform parent;
     public GameObject Node;
+    public GameObject Turret;
 
     public float snapValue = 2;
     public float depth = 0;
@@ -47,7 +48,10 @@ public class PointClick : MonoBehaviour {
             {
                 if (hit.collider.tag.Equals("Node"))
                 {
-                    Destroy(hit.collider.gameObject);
+                    var pos = hit.point;
+                    pos.y = 1.5f;
+                    Instantiate(Turret, SnapPos(pos), Quaternion.identity, parent);
+                    //Destroy(hit.collider.gameObject);
                 }
             }
         }

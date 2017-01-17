@@ -6,10 +6,10 @@ TagManager:
   tags:
   - Node
   - Ground
-  - enemy
   - GridBox
   - Obstacle
   - Nexus
+  - Enemy
   layers:
   - Default
   - TransparentFX
